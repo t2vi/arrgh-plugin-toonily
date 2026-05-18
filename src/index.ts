@@ -2,7 +2,7 @@ import 'dotenv/config'
 import express from 'express'
 import * as t from './toonily'
 
-const PORT = parseInt(process.env.PORT ?? '4001', 10)
+const PORT = parseInt(process.env.PORT ?? '4002', 10)
 const API_KEY = process.env.API_KEY ?? ''
 
 const app = express()
