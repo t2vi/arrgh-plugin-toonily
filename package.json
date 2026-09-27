@@ -1,16 +1,25 @@
 {
   "name": "arrgh-plugin-toonily",
   "version": "1.0.0",
-  "description": "Toonily manhwa source plugin for *ARRgh (plugin-host bundle format)",
+  "description": "Korean webtoons (manhwa). Cloudflare-protected — requires CloakBrowser.",
+  "license": "GPL-3.0-only",
+  "private": true,
   "scripts": {
-    "build": "esbuild src/index.ts --bundle --platform=node --target=node22 --outfile=bundles/toonily.js"
+    "build": "arrgh-plugin build",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "engines": {
+    "node": ">=22"
   },
   "dependencies": {
     "cheerio": "^1.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20.14.0",
-    "esbuild": "^0.21.0",
-    "typescript": "^5.5.0"
+    "@types/node": "^20.19.0",
+    "arrgh-plugin-sdk": "github:t2vi/arrgh-plugin-sdk#v0.1.0",
+    "esbuild": "^0.21.5",
+    "typescript": "^5.9.3",
+    "vitest": "^2.1.9"
   }
 }

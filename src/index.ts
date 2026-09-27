@@ -1,11 +1,13 @@
+import type { PluginInfo } from 'arrgh-plugin-sdk'
+import { version } from '../package.json'
 import { setContext } from './toonily'
 import * as t from './toonily'
 import type { PluginContext } from './toonily'
 
-export const info = {
+export const info: PluginInfo = {
   id: 'toonily',
-  version: '1.0.0',
   name: 'Toonily',
+  version,
   default_explicit: false,
   content_types: ['manhwa'],
 }
